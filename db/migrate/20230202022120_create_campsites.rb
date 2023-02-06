@@ -6,7 +6,7 @@ class CreateCampsites < ActiveRecord::Migration[7.0]
       t.text :description
       t.integer :elevation
       t.integer :coordinates
-      t.integer :campsite_id
+      t.string :image
 
       t.timestamps
     end

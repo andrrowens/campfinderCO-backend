@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_02_022120) do
     t.text "description"
     t.integer "elevation"
     t.integer "coordinates"
-    t.integer "campsite_id"
+    
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,7 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_02_022120) do
     t.string "email"
     t.string "username"
     t.string "password"
-    t.integer "user_id"
+  
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
