@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_02_022120) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_13_194951) do
   create_table "campsites", force: :cascade do |t|
     t.string "name"
     t.string "region"
     t.text "description"
     t.integer "elevation"
     t.integer "coordinates"
-    
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -42,7 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_02_022120) do
     t.string "email"
     t.string "username"
     t.string "password"
-  
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
