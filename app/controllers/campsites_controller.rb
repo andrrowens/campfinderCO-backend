@@ -30,7 +30,7 @@ class CampsitesController < ApplicationController
     private 
 
     def campsite_params 
-        params.permit(:name, :region, :description, :elevation, :coordinates)
+        params.permit(:name, :region, :description, :elevation, :coordinates, :image)
     end
 
 end

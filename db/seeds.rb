@@ -6,11 +6,11 @@ Review.destroy_all
 
 puts "Creating seed data..." 
 
-u1 = User.create(first_name: "Andrew", last_name: "Owens", email: "andrew1@gmail.com", username: "andrew1", password: "password1")
-u2 = User.create(first_name: "Kendra", last_name: "S", email: "woodsgal@aol.com", username: "woodsgal", password: "password2")
-u3 = User.create(first_name: "Victor", last_name: "Martinez", email: "mtnman@gmail.com", username: "mtnman", password: "password3")
-u4 = User.create(first_name: "Sammy", last_name: "E", email: "sammy08@aol.com", username: "hiker08", password: "password4")
-u5 = User.create(first_name: "Jenn", last_name: "Thomas", email: "iamjenn@hotmail.com", username: "tentboss303", password: "password5")
+u1 = User.create(email: "andrew1@gmail.com", username: "andrew1", password: "password1")
+u2 = User.create(email: "woodsgal@aol.com", username: "woodsgal", password: "password2")
+u3 = User.create(email: "mtnman@gmail.com", username: "mtnman", password: "password3")
+u4 = User.create(email: "sammy08@aol.com", username: "hiker08", password: "password4")
+u5 = User.create(email: "iamjenn@hotmail.com", username: "tentboss303", password: "password5")
 
 # user
 # t.string "first_name"
