@@ -1,15 +1,28 @@
 class ApplicationController < ActionController::Base
     include ActionController::Cookies
     rescue_from ActiveRecord::RecordNotFound, with: :not_found
-    rescue_from ActiveRecord::RecordInvalid, with: :invalid_record 
+    rescue_from ActiveRecord::RecordInvalid, with: :not_valid
+
+    # before_action :authorized_user
+
+    # def current_user
+    #     user = User.find_by(id:session[:user_id])
+    #     user
+    # end
+    
+    # def authorized_user
+    #     render json: {errors: "Not Authorized"}, status: :unauthorized unless current_user
+    # end
 
 
-    def not_found 
-        render json: {error: "Record not found"}, status: 400
+    private
+
+    def not_found(exception)
+        render json: {errors: "#{exception.model} not found"}, status: :not_found
     end
-
-    def invalid_record 
-        render json: {error: rasied_error.record.errors.full_message.to_sentence}, status: 400
+    
+    def not_valid(invalid)
+        render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
     end
 
 end

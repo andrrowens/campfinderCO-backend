@@ -6,11 +6,11 @@ Review.destroy_all
 
 puts "Creating seed data..." 
 
-u1 = User.create(email: "andrew1@gmail.com", username: "andrew1", password: "password1")
-u2 = User.create(email: "woodsgal@aol.com", username: "woodsgal", password: "password2")
-u3 = User.create(email: "mtnman@gmail.com", username: "mtnman", password: "password3")
-u4 = User.create(email: "sammy08@aol.com", username: "hiker08", password: "password4")
-u5 = User.create(email: "iamjenn@hotmail.com", username: "tentboss303", password: "password5")
+u1 = User.create(email: "andrew1@gmail.com", username: "andrew1", password: "password")
+u2 = User.create(email: "woodsgal@aol.com", username: "woodsgal", password: "password")
+u3 = User.create(email: "mtnman@gmail.com", username: "mtnman", password: "password")
+u4 = User.create(email: "sammy08@aol.com", username: "hiker08", password: "password")
+u5 = User.create(email: "iamjenn@hotmail.com", username: "tentboss303", password: "password")
 
 # user
 # t.string "first_name"
@@ -20,16 +20,16 @@ u5 = User.create(email: "iamjenn@hotmail.com", username: "tentboss303", password
 # t.string "password"
 # t.integer "user_id"
 
-c1 = Campsite.create(name: "Devil's Gulch", region: "Front Range", description: "Beautiful and close to Denver", elevation: 8532, coordinates: 20302)
-c2 = Campsite.create(name: "Elk Creek", region: "Gore Valley", description: "Good", elevation: 9365, coordinates: 98668)
-c3 = Campsite.create(name: "Black Forest", region: "San Juans", description: "Ok", elevation: 10236, coordinates: 98686)
-c4 = Campsite.create(name: "Magnolia Road", region: "Pikes Peak", description: "Great", elevation: 6721, coordinates: 866)
-c5 = Campsite.create(name: "Flat Tops", region: "Front Range", description: "Fantastic", elevation: 7836, coordinates: 96986)
-c6 = Campsite.create(name: "Bear River", region: "San Juans", description: "Never again", elevation: 8910, coordinates: 89698)
-c7 = Campsite.create(name: "Chicago Lakes", region: "Gore Valley", description: "Kinda cool", elevation: 6982, coordinates: 986668)
-c8 = Campsite.create(name: "Loch Lamond", region: "Pikes Peak", description: "Maybe not", elevation: 7813, coordinates: 86886)
-c9 = Campsite.create(name: "Homestake Reservoir", region: "Front Range", description: "Mehh", elevation: 8521, coordinates: 86977)
-c10 = Campsite.create(name: "Lost Lake", region: "San Juans", description: "Best ever!", elevation: 10597, coordinates: 87546)
+c1 = Campsite.create(name: "Devil's Gulch", region: "Front Range", description: "Beautiful and close to Denver", elevation: 8532, coordinates: 20302, image: "https://i.imgur.com/gW63ZQL.jpg")
+c2 = Campsite.create(name: "Elk Creek", region: "Gore Valley", description: "Good", elevation: 9365, coordinates: 98668, image: "https://i.imgur.com/9tYGUxz.jpg")
+c3 = Campsite.create(name: "Black Forest", region: "San Juans", description: "Ok", elevation: 10236, coordinates: 98686, image: "https://i.imgur.com/g93xVhX.jpg")
+c4 = Campsite.create(name: "Magnolia Road", region: "Pikes Peak", description: "Great", elevation: 6721, coordinates: 866, image: "https://i.imgur.com/0pJKg8G.jpg")
+c5 = Campsite.create(name: "Flat Tops", region: "Front Range", description: "Fantastic", elevation: 7836, coordinates: 96986, image: "https://i.imgur.com/aZQY4A2.jpg")
+c6 = Campsite.create(name: "Bear River", region: "San Juans", description: "Never again", elevation: 8910, coordinates: 89698, image: "https://i.imgur.com/k2lTTIo.jpg")
+c7 = Campsite.create(name: "Chicago Lakes", region: "Gore Valley", description: "Kinda cool", elevation: 6982, coordinates: 986668, image: "https://i.imgur.com/TtobOIZ.jpg")
+c8 = Campsite.create(name: "Loch Lamond", region: "Pikes Peak", description: "Maybe not", elevation: 7813, coordinates: 86886, image: "https://i.imgur.com/SkLKRus.jpg")
+c9 = Campsite.create(name: "Homestake Reservoir", region: "Front Range", description: "Mehh", elevation: 8521, coordinates: 86977, image: "https://i.imgur.com/iv6lH4C.jpg")
+c10 = Campsite.create(name: "Lost Lake", region: "San Juans", description: "Best ever!", elevation: 10597, coordinates: 87546, image: "https://i.imgur.com/Kdk1shY.jpg")
 
 #Campsite
 # t.string "name"
