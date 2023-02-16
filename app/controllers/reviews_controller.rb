@@ -13,13 +13,18 @@ class ReviewsController < ApplicationController
     end
     
     def create
-        review = reviews.create(author_id: session[:user_id])
+        review = Review.create(user_id: session[:user_id])
         render json: review, status: :created
     end
 
+    # def update
+    #     return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
+    #     review = Review.find(params[:id])
+    # end
+
     def update
-        return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
-        review = review.find(params[:id])
+        review = Review.find(user_id: session[:user_id])
+        render json: review, status: :accepted
     end
 
     def destroy
