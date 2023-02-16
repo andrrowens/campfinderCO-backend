@@ -4,7 +4,7 @@ class CampsitesController < ApplicationController
 
     def show
         campsite = Campsite.find(params[:id])
-        render json: campsite 
+        render json: campsite.to_json(include: [reviews: {only: [:title, :date, :content, :image]}], except: [:created_at, :updated_at]), status: :ok 
     end
     
     def index
@@ -13,7 +13,7 @@ class CampsitesController < ApplicationController
     end
     
     def create
-        campsite = Campsite.create(user_id: session[:user_id])
+        campsite = Campsite.create(id: session[:user_id])
         render json: campsite, status: :created
     end
 

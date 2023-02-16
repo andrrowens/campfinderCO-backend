@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     end
     
     def create
-        review = Review.create(user_id: session[:user_id])
+        review = Review.create(id: session[:user_id])
         render json: review, status: :created
     end
 
