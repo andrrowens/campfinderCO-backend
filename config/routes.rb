@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :campsites 
-  resources :users
+  resources :campsites, only: [:index, :show, :create]
+  resources :users, only: [:show]
   resources :reviews
 
-  get '/authorized', to: 'users#show'
-  post '/login', to: 'sessions#create'
+  get '/authenticated_user', to: 'users#show'
+  post '/signup', to: 'users#create'
   delete '/logout', to: 'sessions#destroy'
 
 
