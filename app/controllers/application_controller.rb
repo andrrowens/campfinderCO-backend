@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     end
     
     def authenticated_user
+        puts "test"
         render json: {errors: "Not Authorized"}, status: :unauthorized unless current_user
     end
 

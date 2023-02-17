@@ -5,7 +5,6 @@ CampFinderCO was created to allow campers from Colorado and around the country t
 The following steps are to set up and get started with the backend of the project.
 
 # Git Clone
-  To start you'll need to have your Mac vers (Mac users) or WSL2 (Windows Users) set up
 
 > Go to:  https://github.com/andrrowens/camp-finder-backend
 

@@ -1,7 +1,5 @@
 class CampsitesController < ApplicationController
-    before_action :authorize
-    skip_before_action :authorize, only: [:index]
-
+   
     def show
         campsite = Campsite.find(params[:id])
         render json: campsite.to_json(include: [reviews: {only: [:title, :date, :content, :image]}], except: [:created_at, :updated_at]), status: :ok 
@@ -36,13 +34,6 @@ class CampsitesController < ApplicationController
         campsite = Campsite.find(params[:id])
         campsite.destroy 
         head :no_content 
-    end
-
-
-    private
-    
-    def authorize
-        return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
     end
 
 end
