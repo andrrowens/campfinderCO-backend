@@ -13,9 +13,21 @@ class CampsitesController < ApplicationController
     end
     
     def create
-        campsite = Campsite.create(id: session[:user_id])
-        render json: campsite, status: :created
+        @campsite = Campsite.create(name: params[:name], region: params[:region], description: params[:description], elevation: params[:elevation], coordinates: params[:coordinates], image: params[:image])
+        if @campsite 
+            puts "Campsite created successfully"
+            render json: @campsite, status: :created
+        end
     end
+
+    # def create
+    #     # debugger
+    #     @review = Review.create(user_id: session[:user_id], title: params[:title], content: params[:content], date: params[:date], image: params[:image])
+    #     if @review 
+    #         puts "Review saved successfully"
+    #         render json: @review, status: :created
+    #     end
+    # end
 
     # def update
     #     return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
