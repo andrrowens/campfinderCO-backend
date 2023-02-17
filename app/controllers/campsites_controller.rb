@@ -20,14 +20,7 @@ class CampsitesController < ApplicationController
         end
     end
 
-    # def create
-    #     # debugger
-    #     @review = Review.create(user_id: session[:user_id], title: params[:title], content: params[:content], date: params[:date], image: params[:image])
-    #     if @review 
-    #         puts "Review saved successfully"
-    #         render json: @review, status: :created
-    #     end
-    # end
+
 
     # def update
     #     return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
