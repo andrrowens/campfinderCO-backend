@@ -14,12 +14,17 @@ class ReviewsController < ApplicationController
     
     def create
         # debugger
-        @review = Review.create(user_id: session[:user_id], title: params[:title], content: params[:content], date: params[:date], image: params[:image])
+        @review = Review.create(id: session[:user_id], title: params[:title], content: params[:content], date: params[:date], image: params[:image])
         if @review 
             puts "Review saved successfully"
             render json: @review, status: :created
         end
     end
+
+    # def create
+    #     review = Review.create(id: session[:user_id])
+    #     render json: review, status: :created
+    # end
     
     # def update
     #     return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id

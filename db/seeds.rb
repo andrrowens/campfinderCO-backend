@@ -20,7 +20,7 @@ u5 = User.create(email: "iamjenn@hotmail.com", username: "tentboss303", password
 # t.string "password"
 # t.integer "user_id"
 
-c1 = Campsite.create(name: "Devil's Gulch", region: "Front Range", description: "Beautiful and close to Denver", elevation: 8532, coordinates: 20302, image: "https://i.imgur.com/gW63ZQL.jpg")
+c1 = Campsite.create(name: "Devil's Gulch", region: "Front Range", description: "Beautiful and close to Denver. Terrain varies from open meadows to dense forest so it's easy to find a site that fits your needs. Will generally get busy on the weekend and holidays", elevation: 8532, coordinates: 20302, image: "https://i.imgur.com/gW63ZQL.jpg")
 c2 = Campsite.create(name: "Elk Creek", region: "Gore Valley", description: "Good", elevation: 9365, coordinates: 98668, image: "https://i.imgur.com/9tYGUxz.jpg")
 c3 = Campsite.create(name: "Black Forest", region: "San Juans", description: "Ok", elevation: 10236, coordinates: 98686, image: "https://i.imgur.com/g93xVhX.jpg")
 c4 = Campsite.create(name: "Magnolia Road", region: "Pikes Peak", description: "Great", elevation: 6721, coordinates: 866, image: "https://i.imgur.com/0pJKg8G.jpg")
