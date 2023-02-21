@@ -58,3 +58,5 @@ This will start our backend API.
 Be sure to also check out https://github.com/andrrowens/phase-4-project-frontend for CampFinderCO's frontend repository.
 
 Cheers!
+
+License: This project is licensed under the MIT license

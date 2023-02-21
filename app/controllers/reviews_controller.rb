@@ -16,8 +16,11 @@ class ReviewsController < ApplicationController
     end
 
     def update
+        #line 20 "if @review" is so that only logged in user can update their OWN review
+        if @review.user == @user
         @review.update!(review_params)
         render json: @review, status: :accepted
+        end
     end
 
     def destroy
